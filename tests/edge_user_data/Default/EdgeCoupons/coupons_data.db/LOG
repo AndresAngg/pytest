@@ -1,0 +1,11 @@
+2025/02/14-09:55:45.049 6e3c Reusing MANIFEST C:\Users\andre\Documents\proyectos\pyTest\tests\edge_user_data\Default\EdgeCoupons/coupons_data.db/MANIFEST-000001
+2025/02/14-09:55:45.054 6e3c Recovering log #4
+2025/02/14-09:55:45.057 6e3c Level-0 table #7: started
+2025/02/14-09:55:45.068 6e3c Level-0 table #7: 668272 bytes OK
+2025/02/14-09:55:45.075 6e3c Recovering log #7
+2025/02/14-09:55:45.076 6e3c Reusing old log C:\Users\andre\Documents\proyectos\pyTest\tests\edge_user_data\Default\EdgeCoupons/coupons_data.db/000007.log 
+2025/02/14-09:55:45.079 6e3c Delete type=0 #4
+2025/02/14-09:55:45.079 6e3c Delete type=2 #8
+2025/02/14-09:55:45.177 174 Level-0 table #9: started
+2025/02/14-09:55:45.194 174 Level-0 table #9: 668272 bytes OK
+2025/02/14-09:55:45.197 174 Delete type=0 #7
