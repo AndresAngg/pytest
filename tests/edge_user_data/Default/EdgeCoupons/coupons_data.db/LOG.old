@@ -1,5 +1,0 @@
-2025/02/14-09:55:26.131 2810 Reusing MANIFEST C:\Users\andre\Documents\proyectos\pyTest\tests\edge_user_data\Default\EdgeCoupons/coupons_data.db/MANIFEST-000001
-2025/02/14-09:55:26.140 2810 Recovering log #4
-2025/02/14-09:55:26.142 2810 Reusing old log C:\Users\andre\Documents\proyectos\pyTest\tests\edge_user_data\Default\EdgeCoupons/coupons_data.db/000004.log 
-2025/02/14-09:55:26.151 12cc Level-0 table #8: started
-2025/02/14-09:55:26.165 12cc Level-0 table #8: 668272 bytes OK
