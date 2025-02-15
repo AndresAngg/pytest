@@ -8,7 +8,6 @@ from pages.sanbox_page import SanboxPage
 def browser():
     driver = webdriver.Edge(service=webdriver.EdgeService(EdgeChromiumDriverManager().install()))
     # driver.implicitly_wait(10)
-    driver.get("https://thefreerangetester.github.io/sandbox-automation-testing/")
     yield driver
     driver.quit()
 
