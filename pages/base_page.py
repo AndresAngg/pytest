@@ -1,6 +1,7 @@
-from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support.ui import WebDriverWait, Select
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.by import By
+from selenium.webdriver import ActionChains
 
 class BasePage:
     def __init__(self, driver):
@@ -10,7 +11,7 @@ class BasePage:
         self.driver.get(url)
         
     def wait_element_present(self, locator, timeout=10):
-        try:    
+        try:
             return WebDriverWait(self.driver, timeout).until(
                 EC.presence_of_element_located(locator)
             )
@@ -25,8 +26,32 @@ class BasePage:
             ).click()
 
         except Exception as e:
-            print(f"Elemento no cliqueable {locator}")
+            print(f"Elemento no encontrado o cliqueable {locator}")
             raise e
         
+    def hover_over_element(self, locator):
+        element = self.wait_element_present(locator)
+        ActionChains(self.driver).move_to_element(element).perform()
+        
     def write_field(self, locator, value):
-        self.wait_element_present(locator).send_keys(value)
+       element = self.wait_element_present(locator)
+       element.clear()
+       element.send_keys(value)
+    
+    def select_value_for_dropdown(self, locator, value):
+        dropdownField = Select(self.wait_element_present(locator))
+        dropdownField.select_by_visible_text(value)
+        
+    def select_index_for_dropdown(self, locator, index):
+        dropdownnField = Select(self.wait_element_present(locator))
+        dropdownnField.select_by_index(index)
+        
+    def get_options_dropdown(self, locator):
+        dropdown = Select(self.wait_element_present(locator))
+        return [option.text for option in dropdown.options]
+    
+    def get_txt_element(self, locator):
+        return self.wait_element_present(locator)
+    
+    def reload_page(self):
+        self.driver.refresh()
